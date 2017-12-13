@@ -19,18 +19,9 @@ Unzip the file into your botfolder.
 
 To add alerts in an script do it like this:
 
-ALERTSTRING = {"alert_combination":
-	{
-		"gif":" >giffile.gif< ",
-		"text":" >giftext< ",
-		"duration":" >gifduration< ",
-		"location":" >giflocation< ",
-		"inanimation":" >gifinanimation< ",
-		"outanimation":"gifoutanimation"
-	}
-}
-
-$.addAlert(ALERTSTRING)
+$.addAlert(giffile, giftext, duration);
+$.addAlert(giffile, giftext, duration, position);
+$.addAlert(giffile, giftext, duration, position, inanimation, outanimation);
 
 
 ## Additional Informations
