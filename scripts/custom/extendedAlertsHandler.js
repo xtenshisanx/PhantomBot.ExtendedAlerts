@@ -11,7 +11,6 @@
 			{
 				var alertString = alertQueue.poll();
 				lastAlertDuration = parseInt(JSON.parse(alertString).alert_combination.duration) + 1000;
-				$.consoleLn(lastAlertDuration);
 				$.panelsocketserver.sendToAll(alertString);
 				lastAlert = now;
 			}
