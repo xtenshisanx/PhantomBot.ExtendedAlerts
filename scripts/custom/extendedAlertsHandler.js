@@ -17,9 +17,21 @@
 		}, 1000);
 	};
 	
-	function addAlert(string) {
-		alertQueue.add(string);
-	}
+	function addAlert(giffile, giftext, duration)
+	{
+		installTimedAlert(giffile, giftext, duration, "Center", "BounceIn", "BounceOut");
+	};
+	
+	function addAlert(giffile, giftext, duration, position)
+	{
+		installTimedAlert(giffile, giftext, duration, position, "BounceIn", "BounceOut");
+	};
+	
+	function addAlert(giffile, giftext, duration, position, inanimation, outanimation)
+	{
+		var alertstring = '{"alert_combination":{"gif":"'+giffile+'","text":"'+giftext+'","duration":"'+duration+'","location":"'+position+'","inanimation":"'+inanimation+'","outanimation":"'+outanimation+'"}}';
+		alertQueue.add(alertstring);
+	};
 	
 	$.bind('command', function(event) {
         var sender = event.getSender(),
