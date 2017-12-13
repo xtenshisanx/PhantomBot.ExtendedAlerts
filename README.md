@@ -29,6 +29,7 @@ ALERTSTRING = {"alert_combination":
 		"outanimation":"gifoutanimation"
 	}
 }
+
 $.addAlert(ALERTSTRING)
 
 
