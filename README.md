@@ -20,7 +20,9 @@ Unzip the file into your botfolder.
 To add alerts in an script do it like this:
 
 $.addAlert(giffile, giftext, duration);
+
 $.addAlert(giffile, giftext, duration, position);
+
 $.addAlert(giffile, giftext, duration, position, inanimation, outanimation);
 
 
